@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign up – Back2You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo" aria-label="Back2You Home">
+        <img src="assets/images/back2you-logo.png" alt="Back2You – Lost · Found · Reunited">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="report-lost.html">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="login.html">Log in</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="auth-card fade-in">
+      <div class="auth-card-header">
+        <a href="index.html" class="logo" aria-label="Back2You Home">
+          <img src="assets/images/back2you-logo.png" alt="Back2You">
+        </a>
+        <h1>Create your account</h1>
+        <p class="text-muted text-sm">Join the campus lost & found community</p>
+      </div>
+      <div class="auth-card-body">
+        <div class="alert alert-info" style="margin-bottom:1.25rem">
+          <strong>Demo Mode</strong> — Registration is simulated. Real accounts will be created with Supabase in Phase 3.
+        </div>
+        <form id="registerForm" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="fullName">Full Name <span class="required">*</span></label>
+            <input type="text" id="fullName" class="form-input" placeholder="Your full name" autocomplete="name" required>
+            <div class="form-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">College Email <span class="required">*</span></label>
+            <input type="email" id="email" class="form-input" placeholder="you@college.edu" autocomplete="email" required>
+            <div class="form-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password">Password <span class="required">*</span></label>
+            <input type="password" id="password" class="form-input" placeholder="At least 6 characters" autocomplete="new-password" required>
+            <div class="form-error"></div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="confirmPassword">Confirm Password <span class="required">*</span></label>
+            <input type="password" id="confirmPassword" class="form-input" placeholder="Repeat password" autocomplete="new-password" required>
+            <div class="form-error"></div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Create account</button>
+        </form>
+      </div>
+      <div class="auth-card-footer">
+        Already have an account? <a href="login.html">Log in</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>© 2025-2026 Back2You · IIMS Chinchwad</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/validation.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

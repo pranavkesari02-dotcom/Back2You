@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Items – Back2You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo" aria-label="Back2You Home">
+        <img src="assets/images/back2you-logo.png" alt="Back2You – Lost · Found · Reunited">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="search.html" class="active">Search</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+        <a href="register.html" class="btn btn-primary btn-sm">Sign up</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="report-lost.html">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Log in</a>
+      <a href="register.html">Sign up</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>Search Lost & Found</h1>
+        <p>Filter by keyword, category, location, or status to find matching items.</p>
+      </div>
+    </div>
+
+    <div class="container section-sm">
+      <form id="searchForm" class="mb-6">
+        <div class="search-bar">
+          <input type="search" id="searchInput" placeholder="Search by name, description, location..." aria-label="Search items">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+        <div class="filters">
+          <select id="filterCategory" class="filter-select" aria-label="Category">
+            <option value="all">All Categories</option>
+          </select>
+          <select id="filterLocation" class="filter-select" aria-label="Location">
+            <option value="all">All Locations</option>
+          </select>
+          <select id="filterStatus" class="filter-select" aria-label="Status">
+            <option value="all">All Statuses</option>
+            <option value="lost">Lost</option>
+            <option value="found">Found</option>
+            <option value="returned">Returned</option>
+          </select>
+          <select id="filterType" class="filter-select" aria-label="Type">
+            <option value="all">Lost & Found</option>
+            <option value="lost">Lost only</option>
+            <option value="found">Found only</option>
+          </select>
+        </div>
+      </form>
+
+      <div class="section-title">
+        <p id="resultCount" class="text-sm text-muted font-medium">Loading...</p>
+      </div>
+
+      <div id="searchResults">
+        <!-- Filled by search.js -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3 class="logo logo-sm" style="margin-bottom:0.75rem"><img src="assets/images/back2you-logo.png" alt="Back2You"></h3>
+          <p>Helping lost belongings find their way back at IIMS Chinchwad, Pune.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="report-lost.html">Report Lost</a></li>
+            <li><a href="report-found.html">Report Found</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Log in</a></li>
+            <li><a href="register.html">Sign up</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025-2026 Back2You · Academic Project</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="demo/sample-data.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

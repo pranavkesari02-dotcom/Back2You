@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Dashboard – Back2You</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="logo" aria-label="Back2You Home">
+        <img src="assets/images/back2you-logo.png" alt="Back2You – Lost · Found · Reunited">
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+        <a href="dashboard.html" class="active">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="btn btn-outline btn-sm">Log in</a>
+        <button class="mobile-menu-btn" aria-label="Open menu" aria-expanded="false">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="search.html">Search</a>
+      <a href="report-lost.html">Report Lost</a>
+      <a href="report-found.html">Report Found</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Log in</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-header">
+      <div class="container">
+        <h1>My Dashboard</h1>
+        <p>Track your reports and claims in one place.</p>
+      </div>
+    </div>
+
+    <div class="container section-sm">
+      <div id="demoNotice"></div>
+
+      <div class="stats-grid mb-8">
+        <div class="stat-card">
+          <div class="stat-icon teal">📋</div>
+          <div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">My Reports</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon navy">🔍</div>
+          <div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Active Claims</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon green">✅</div>
+          <div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Returned</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon red">❌</div>
+          <div>
+            <div class="stat-value">—</div>
+            <div class="stat-label">Still Lost</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-8">
+        <div class="section-title">
+          <h2>My Reports</h2>
+          <a href="report-lost.html" class="btn btn-primary btn-sm">+ New Report</a>
+        </div>
+        <div id="myReports"></div>
+      </div>
+
+      <div>
+        <div class="section-title">
+          <h2>My Claims</h2>
+        </div>
+        <div id="myClaims"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border:none;padding-top:0">
+        <span>© 2025-2026 Back2You · IIMS Chinchwad</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="demo/sample-data.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
